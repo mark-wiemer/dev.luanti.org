@@ -1,8 +1,29 @@
-- about-this-site
-    - guidelines.md
-    - local-development.md
-    - making-changes.md
-    - rules.md
+Proposed changes to the current structure
+
+- `- name` == no change, this file/folder stays in the same parent folder
+- `- A name (description)` == add
+- `- D name` == delete
+- `- M name` == move to this location
+- `- R old-name -> new-name` == rename file already in this folder
+- `- R name` == rename/move file from another folder into this one
+
+---
+
+- R about-this-site -> about
+    - A contributing.md (merges guidelines, local-development, making-changes, and rules. Adds link to engine contributing.)
+    - R changelog.md
+    - R celeron55.md
+    - D guidelines.md (merged into contributing)
+    - R irc.md
+    - D local-development.md (merged into contributing)
+    - R luanti.md
+    - R luanti-edu.md
+    - D making-changes.md (merged into contributing)
+    - R old-changelog.md
+    - R overview-of-luanti-forks.md
+    - D rules.md (merged into contributing)
+    - R terminology.md
+    - R troubleshooting.md
     - _index.md
 - api
     - classes
@@ -25,113 +46,116 @@
     - texture-modifiers.md
     - timing-and-event-loop.md
     - _index.md
-- backup-solutions.md
-- calinous-law.md
-- celeron55.md
-- changelog.md
-- chat.md
-- cheating.md
-- compiling
-    - android.md
-    - improving-build-times.md
-    - linux-server.md
-    - windows-msys2.md
-    - _index.md
-- console.md
 - content-dev
+    - R models
+        - blockbench.md
+        - using-blender.md
+        - _index.md
+    - R calinous-law.md
     - creating-texture-packs.md
     - debug.md
     - development-tools.md
     - development-troubleshooting.md
+    - R distributing-luanti-games.md
+    - R groups.md
     - introduction-to-l-system-trees.md
+    - R itemstrings.md
+    - R keeping-world-compatibility.md
     - licensing.md
+    - R light.md
+    - R limitations.md
     - lua-conventions.md
     - lua-optimization-tips.md
     - luajit-differences.md
     - luanti-schematic-file-format.md
+    - R main-menu-music.md
     - mod-dependency-management.md
     - mod-interoperability.md
     - modding-tips.md
+    - R player-physics.md
     - programs-and-editors.md
+    - R right-to-a-name.md
     - schematic.md
+    - R textures.md
     - _index.md
-- contentdb.md
-- controls.md
-- coordinates.md
-- distributing-luanti-games.md
 - engine
+    - R mapgen
+        - custom-lua-mapgen.md
+        - emulate-mapgen-v6-using-a-customised-mapgen-v7.md
+        - evolution.md
+        - features.md
+        - memory-optimisations.md
+        - _index.md
     - basic-data-structures.md
     - game-theme-reimplementation.md
     - items.md
+    - R liquid.md
+    - R list-of-hardcoded-features.md
+    - R luajit.md
     - network-protocol.md
     - nmpr.md
+    - R nodes.md
     - objects.md
     - player-world-interaction.md
     - script-engine.md
+    - R spawn-algorithm.md
     - structure.md
+    - R version-number.md
+    - R world-boundaries.md
+    - R worlds.md
     - _index.md
 - engine-dev-process
+    - R compiling
+        - android.md
+        - improving-build-times.md
+        - linux-server.md
+        - windows-msys2.md
+        - _index.md
     - code-style-guidelines.md
     - git-guidelines.md
     - lua-code-style-guidelines.md
     - meetings.md
     - merging-core-pull-requests-to-upstream.md
     - organisation.md
+    - R profiler-graph.md
     - releasing-luanti.md
+    - R steamdeck.md
     - _index.md
-- faq.md
-- gamepads.md
-- getting-started.md
-- groups.md
-- hand.md
-- hud.md
-- installing-client-side-mods.md
-- installing-mods.md
-- inventory.md
-- irc.md
-- itemstrings.md
-- keeping-world-compatibility.md
-- l-system-tree-examples.md
-- light.md
-- limitations.md
-- liquid.md
-- list-of-hardcoded-features.md
-- luajit.md
-- luanti-edu.md
-- luanti.md
-- main-menu-music.md
-- mapgen
-    - custom-lua-mapgen.md
-    - emulate-mapgen-v6-using-a-customised-mapgen-v7.md
-    - evolution.md
-    - features.md
-    - memory-optimisations.md
-    - _index.md
-- minetest-conf.md
-- minetestmapper.md
-- mining.md
-- mobile
-    - accessing-android-data-directory.md
-    - improving-games-and-mods-for-mobile.md
-    - _index.md
-- mobs.md
-- models
-    - blockbench.md
-    - using-blender.md
-    - _index.md
-- mods.md
-- nodes.md
-- old-changelog.md
-- overview-of-luanti-forks.md
-- player-physics.md
-- player.md
-- pointing.md
-- privileges.md
-- profiler-graph.md
-- protection.md
-- punching.md
-- reporting-bugs.md
-- right-to-a-name.md
+- A getting-started (Installing client, installing first game, intro to installing mods, links to further pages)
+    - A in-game (Guidance for using Luanti in-game, controls, hand, chat, etc.)
+        - R chat.md
+        - R console.md
+        - R controls.md
+        - R coordinates.md
+        - R hud.md
+        - R inventory.md
+        - R mining.md
+        - R mobs.md
+        - R player.md
+        - R pointing.md
+        - R privileges.md
+        - R punching.md
+        - R sneaking.md
+        - R tool.md
+        - A _index.md
+    - R mobile
+        - accessing-android-data-directory.md
+        - improving-games-and-mods-for-mobile.md
+        - _index.md
+    - R backup-solutions.md
+    - R cheating.md
+    - R contentdb.md
+    - R faq.md
+    - R gamepads.md
+    - R getting-started.md
+    - R installing-client-side-mods.md
+    - R installing-mods.md
+    - R minetest-conf.md
+    - R mods.md
+    - R reporting-bugs.md
+    - R texture-packs.md
+    - R tutorials.md
+    - A _index.md
 - server
     - commands.md
     - database-backends.md
@@ -140,21 +164,12 @@
     - remote-media.md
     - setup.md
     - _index.md
-- sneaking.md
-- spawn-algorithm.md
-- steamdeck.md
-- terminology.md
-- texture-packs.md
-- textures.md
-- tool.md
 - translation
     - de.md
     - mods-and-games.md
     - weblate.md
     - _index.md
-- troubleshooting.md
-- tutorials.md
-- version-number.md
-- world-boundaries.md
-- worlds.md
+- D l-system-tree-examples.md (merged into content-dev/introduction-to-l-system-trees)
+- D minetestmapper.md (merged into content-dev/programs-and-editors)
+- D protection.md (stub, no links to it)
 - _index.md
